@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="gazebo_d435" params="camera_name reference_link topics_ns depth_optical_frame color_optical_frame infrared1_optical_frame infrared2_optical_frame publish_pointcloud:=true">
+
+    <gazebo reference="${reference_link}">
+      <sensor name="${camera_name}" type="depth">
+        <visualize>true</visualize>
+        <update_rate>30.0</update_rate>
+        <camera name="${camera_name}">
+          <horizontal_fov>1.5184</horizontal_fov> 
+          <vertical_fov>1.0123</vertical_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>10.0</far>
+          </clip>
+        </camera>
+        
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <ros>
+            <namespace>${topics_ns}</namespace>
+            <remapping>image_raw:=color/image_raw</remapping>
+            <remapping>depth/image_raw:=depth/image_raw</remapping>
+            <remapping>camera_info:=color/camera_info</remapping>
+            <remapping>depth/camera_info:=depth/camera_info</remapping>
+            <remapping>points:=depth/color/points</remapping>
+          </ros>
+
+          <frame_name>${depth_optical_frame}</frame_name>
+          
+          <min_depth>0.1</min_depth>
+          <max_depth>10.0</max_depth>
+          <hack_baseline>0.07</hack_baseline>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+</robot>
