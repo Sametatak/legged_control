@@ -75,7 +75,7 @@ def generate_launch_description():
             os.path.join(
                 get_package_share_directory("champ_bringup"),
                 "launch",
-                "bringup.launch.py",
+                "bringup2.launch.py",
             )
         ),
         launch_arguments={

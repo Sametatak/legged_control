@@ -159,7 +159,7 @@ def generate_launch_description():
     # cmd_vel dinler -> leg_targets_xyz basar
     # ---------------------------------------------------------
     simple_gait_node = Node(
-        package="champ_base", # Dosyalar champ_base/src icinde ve orada derlendi
+        package="my_quadruped_cpp_pkg", # Dosyalar champ_base/src icinde ve orada derlendi
         executable="simple_gait_node", 
         output="screen",
         parameters=[
@@ -173,7 +173,7 @@ def generate_launch_description():
     # leg_targets_xyz dinler -> joint_group_position_controller/command basar
     # ---------------------------------------------------------
     simple_ik_node = Node(
-        package="champ_base", 
+        package="my_quadruped_cpp_pkg", 
         executable="simple_ik_node",
         output="screen",
         parameters=[
