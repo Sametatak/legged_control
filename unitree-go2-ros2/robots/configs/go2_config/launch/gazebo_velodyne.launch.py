@@ -33,8 +33,8 @@ def generate_launch_description():
     )
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
-    default_model_path = os.path.join(descr_pkg_share, "xacro/robot_VLP.xacro")
-    default_world_path = "/home/atak/smt_ws/src/my_quadruped_control/worlds/my_world.world"
+    default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
+    default_world_path = "/home/atak/my_ws3/src/legged_control/my_quadruped_control/worlds/my_world.world"
 
     declare_use_sim_time = DeclareLaunchArgument(
         "use_sim_time",
