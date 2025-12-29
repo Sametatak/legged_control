@@ -24,7 +24,6 @@ sudo apt install ros-humble-ros2-control
 
 ### To launch the simulation environment along with the leg control logic, run the following command:
 
-Bash
 
 ros2 launch go2_config legged_control.launch.py
 
