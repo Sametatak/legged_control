@@ -12,15 +12,6 @@ This project requires the URDF and description files from the official Unitree r
 * **ROS 2 Humble** (Desktop Full recommended)
 * **Gazebo**
 
-### ROS 2 Dependencies
-Install the required packages using the following commands:
-
-sudo apt install ros-humble-gazebo-ros2-control
-sudo apt install ros-humble-xacro
-sudo apt install ros-humble-robot-localization
-sudo apt install ros-humble-ros2-controllers
-sudo apt install ros-humble-ros2-control
-
 
 ### To launch the simulation environment along with the leg control logic, run the following command:
 
