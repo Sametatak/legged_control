@@ -10,7 +10,7 @@ This project requires the URDF and description files from the official Unitree r
 
 ### System Requirements
 * **ROS 2 Humble** (Desktop Full recommended)
-* **Gazebo**
+* **Gazebo classic**
 
 
 ### To launch the simulation environment along with the leg control logic, run the following command:
