@@ -21,22 +21,7 @@ sudo apt install ros-humble-robot-localization
 sudo apt install ros-humble-ros2-controllers
 sudo apt install ros-humble-ros2-control
 
-### installation
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-Clone the repository:
 
-Bash
-
-git clone https://github.com/Sametatak/legged_control.git)
-Build and Source:
-
-Bash
-
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-Usage
 ### To launch the simulation environment along with the leg control logic, run the following command:
 
 Bash
